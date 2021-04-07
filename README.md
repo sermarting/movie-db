@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center">
   <img width="200" src="https://open-wc.org/hero.png"></img>
 </p>
@@ -28,3 +29,7 @@ npm init @open-wc
 For most of the tools, the configuration is in the `package.json` to reduce the amount of files in your project.
 
 If you customize the configuration a lot, you can consider moving them to individual files.
+=======
+# movie-db
+Proyecto con LitElement haciendo uso de la API de The Movie Database
+>>>>>>> d5c5fe3207e3554aacd44ad8eba072b961ff0c55

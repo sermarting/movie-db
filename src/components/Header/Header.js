@@ -13,7 +13,7 @@ export class Header extends LitElement {
   constructor() {
     super();
 
-    this.logo = 'assets/logo.png';
+    this.logo = 'assets/movie-db-logo.png';
     this.menuItems = [
       {
         title: 'Inicio',
@@ -37,7 +37,7 @@ export class Header extends LitElement {
       }
 
       img {
-        max-width: 125px;
+        max-width: 70px;
       }
     `;
   }

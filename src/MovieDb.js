@@ -3,6 +3,7 @@ import { Router } from '@vaadin/router';
 
 import './views/Movies/Movies.js'
 import './views/Home/Home.js'
+import './views/Search/Search.js'
 
 import './components/Header/Header.js'
 import './components/Footer/Footer.js'
@@ -40,7 +41,27 @@ export class MovieDb extends LitElement {
     router.setRoutes([
       { path: '/', component: 'view-home'},
       { path: '/movies', component: 'view-movies'},
+      { path: '/search', component: 'view-search'}
     ])
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    window.addEventListener('app-search', this.handleSearch);
+  }
+
+  disconnectedCallback() {
+    window.removeEventListener('app-search', this.handleSearch);
+    super.disconnectedCallback();
+  }
+
+  handleSearch(event) {
+    const { detail } = event;
+
+    Router.go({
+      pathname: '/search',
+      search: `?query=${detail}`
+    })
   }
 
   render() {
